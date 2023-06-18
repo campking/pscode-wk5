@@ -16,9 +16,9 @@ int num1;
 
 check if remainder
 if(num1 % 2 == 0){
-		cout << "That is an even number" \n;
+		Console.WriteLine("That is an even number");
 	} else{
-		cout << "That number is odd, like you," \n;
+		Console.WriteLine("That number is odd, like you.") ;
 	}	
 
 
@@ -26,11 +26,47 @@ if(num1 % 2 == 0){
 // Exercise 3: 
 Write pseudo code that will perform the following.    
 
-a) Read in 5 separate numbers.   
+a) Read in 5 separate numbers.
+establish an array
+Write a for loops to read in 5 inputs from the user, store them in an array
+   
 b) Calculate the average of the five numbers.
+
+add the data of the array and divide using .length to find the avg
+
 c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
+
+use .sort to organize the array from small to large
+
 d) Write out the results found from steps b and c with a message describing what they are
 
-(Your pseudocode here)
+ public static void Main()
+    {
+
+        int low = 1;
+        int high = 49;
+
+        int[] randomnumbers = new int[5];
+        Random randNum = new Random();
+
+         
+
+        for (int i = 0; i < 5; i++)
+        {
+            randomnumbers[i] = randNum.Next(low, high);
+        }
+        for (int j = 0; j < 5; j++)
+        {
+            Console.WriteLine(randomnumbers[j]);
+        }
+        Console.WriteLine("\n\n\n" + "The average value of this array is " + (Enumerable.Sum(randomnumbers))/(randomnumbers.Length) + "." + "\n\n\n");
+
+        Array.Sort(randomnumbers);
+
+        for (int x = 0; x < 5; x++)
+        {
+            Console.WriteLine(randomnumbers[x]);
+        }
+    }
 
 -- END --
